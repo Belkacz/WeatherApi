@@ -65,7 +65,7 @@ clonedWeatherForecast.removeChild(WatherChildren[3])
 
 const WetherFunction = async (location="auto:ip") =>{
     const firstresponse = await 
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${location}&days=3`, {mode: 'cors'});
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${location}&days=3`, {mode: 'cors'});
     const firstCiti = await firstresponse.json()
     const { location: {name}, current:{temp_c, pressure_mb, humidity, wind_mph},} = firstCiti
     const forecastday =  firstCiti.forecast.forecastday
